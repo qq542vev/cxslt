@@ -1,0 +1,61 @@
+<?xml encoding="UTF-8"?>
+<!-- ====================
+	# ENTITY
+ ==================== -->
+
+<!-- ====================
+	## DTD Document
+ ==================== -->
+
+<!ENTITY cxsltl.dtdDocument '
+	<foaf:Document
+		rdf:about="http://purl.org/meta/ns/xslt/xsltdoc/schema/xsltdoc.dtd"
+		xmlns:dcterms="http://purl.org/dc/terms/"
+		xmlns:foaf="http://xmlns.com/foaf/0.1/"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	>
+		<dcterms:description xml:lang="ja">ベース用のDTDファイル</dcterms:description>
+		<dcterms:created rdf:datatype="http://purl.org/dc/terms/W3CDTF">2015-12-01</dcterms:created>
+		<dcterms:modified rdf:datatype="http://purl.org/dc/terms/W3CDTF">2015-12-01</dcterms:modified>
+		<dcterms:creator rdf:resource="http://purl.org/meta/me/"/>
+		<dcterms:conformsTo rdf:resource="http://www.w3.org/TR/xml/">
+		<dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+	</foaf:Document>
+'>
+
+<!-- ====================
+	## Namespace IRIs
+ ==================== -->
+
+<!ENTITY cxsltl.ns.iri.cxsltl "http://purl.org/meta/ns/xslt/#">
+
+<!-- ====================
+	## Namespace Prefixes
+ ==================== -->
+
+<!ENTITY % cxsltl.ns.prefix.cxsltl "cxsltl">
+
+<!-- ====================
+	## Attributes
+ ==================== -->
+
+<!ENTITY % cxsltl.attribute.xml.base "xml:base ID #IMPLIED">
+<!ENTITY % cxsltl.attribute.xml.id "xml:id ID #IMPLIED">
+<!ENTITY % cxsltl.attribute.xml.lang "xml:lang ID #IMPLIED">
+<!ENTITY % cxsltl.attribute.xml.space "xml:space (default|preserve) 'default'">
+
+<!-- ====================
+	## Attribute Sets
+ ==================== -->
+
+<!ENTITY % cxsltl.set.attribute.namespace "
+	xmlns:%cxsltl.ns.prefix.cxsltl; CDATA #FIXED '&cxsltl.ns.iri.cxsltl;'
+">
+
+<!-- ====================
+	# ELEMENT & ATTLIST
+ ==================== -->
+
+<!ATTLIST xsl:stylesheet
+	%cxsltl.set.attribute.namespace;
+>
